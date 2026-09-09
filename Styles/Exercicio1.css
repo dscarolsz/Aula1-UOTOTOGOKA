@@ -1,32 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: khaki;
     padding: 40px;
+    margin: 0;
 }
 
-h1{
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background-color: transparent;
+    width: auto;
+}
+
+header nav a {
+    display: inline-block;
+    width: auto;
+    background-color: chocolate;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+header nav a:hover {
+    background-color: rgb(92, 42, 6);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+h1 {
     color: rgb(141, 43, 10);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 4.2rem;
+}
+
+h2 {
+    font-size: 20px;
+    color: rgb(139, 91, 0);
+    margin-top: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-p{ 
+p { 
     color: rgb(167, 78, 19);
-    font-size: 30px;
+    font-size: 25px;
     font-family: fantasy;
 }
 
-img{
+img {
     display: block;
-    margin: 10px auto;
+    margin: 15px auto;
     width: 240px;
     border-radius: 20%;
 }
 
-a{
+a {
     display: block;
     width: 300px;
-    margin: 15px auto;
+    margin: 15px auto; /* O 'auto' nas laterais centraliza o botao */
     background-color: chocolate;
     color: rgb(0, 0, 0);
     padding: 10px;
@@ -34,75 +76,116 @@ a{
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     background-color: rgb(92, 42, 6);
     transform: scale(1.05);
 }
 
-ul, ol{
+ul, ol {
     width: 220px;
     margin: 20px auto;
     text-align: left;
     color: rgb(82, 51, 12);
     font-size: 17px;
     background-color: rgb(209, 114, 46);
-    border-radius: 8px; /*Deixando a borda redonda*/
+    border-radius: 8px;
     padding: 15px 15px 15px 35px;
 }
 
-    li{
-        margin-bottom: 8px;
-    }
-
-    h2{
-        font-size: 20px;
-        color: rgb(139, 91, 0);
-        margin-top: 20px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    form{
-        width: 220px;
-        margin: 20px auto;
-        display: block;
-        background-color: rgb(189, 156, 58);
-        padding: 30px;
-        border-radius: 8px;
-        text-align: left;
-       
+li {
+    margin-bottom: 8px;
 }
 
+form {
+    width: 280px;
+    margin: 20px auto;
+    display: block;
+    background-color: rgb(189, 156, 58);
+    padding: 25px;
+    border-radius: 8px;
+    text-align: left;
+}
 
-    label{
-        display: block;
-        font-size: 13px;
-        color: rgb(81, 59, 2);
-        margin-bottom: 4px;
-        margin-top: 10px;
-    }
+label {
+    display: block;
+    font-size: 13px;
+    color: rgb(81, 59, 2);
+    margin-bottom: 4px;
+    margin-top: 10px;
+}
 
-    input, textarea{
-        width: 100%;
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 13px;
-    }
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
 
-    button{
-        width: 100%;
-        margin-top: 15px;
-        background-color: rgb(249, 247, 225);
-        color: black;
-        border: none;
-        padding: 10px;
-        border-radius: 10px;
-        font-size: 14px;
-        cursor: pointer;
-        transition: backgound-color 0.3s ease;
-    }
+button {
+    width: 100%;
+    margin-top: 15px;
+    background-color: rgb(249, 247, 225);
+    color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
 
-    button:hover{
-        background-color: rgb(135, 103, 22);
-    }
+button:hover {
+    background-color: rgb(135, 103, 22);
+    color: white;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: large; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  
+  body {
+    padding: 15px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  header nav a {
+    width: 100%; 
+    text-align: center;
+  }
+
+  .social-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
